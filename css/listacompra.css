@@ -1,0 +1,128 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-oct-2017, 14:03:05
+    Author     : macf3rn4nd0
+*/
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+}
+.contenido{
+    margin: 0 auto;
+    width: 360px;
+    /*background: #1f1f1f;*/
+}
+.contenido header{
+    text-align: center;
+}
+table tr th{
+    text-align: center;
+}
+.productos{
+    width: 40%;
+}
+.cantidad{
+    text-align: center;
+    width: 30%;
+}
+.crud{
+    width: 30%;
+}
+.iconomas, .iconomenos{
+    cursor: pointer;
+     border: 1px solid #B5B8C8;
+     border-radius: 4px;
+     padding-top: 3px;
+     padding-bottom: 3px;
+     padding-left: 5px;
+     padding-right: 5px;
+}
+.iconomas:hover, .iconomenos:hover{
+    background-color: white;
+}
+table tr .crud{
+    text-align: center;
+}
+.iconomas{
+    margin-right: 3px;
+    
+}
+.iconomenos{
+    margin-left: 3px;
+}
+.iconoeditar{
+    color: green;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.iconoborrar{
+    color: red;
+    margin-left: 8px;
+    cursor: pointer;
+}
+footer{
+    text-align: center;
+}
+.contenidoformulario{
+    margin: 0 auto;
+    width: 300px;
+}
+
+#formularioEnvio{
+    
+}
+#formularioEnvio a, button{
+    margin-top: 15px;text-align: center;
+}
+.grupobotonera{
+    text-align: center;
+}
+#usuarioErroneo{
+    border-radius: 6px;
+    margin: 0 auto;
+    padding: 12px 20px 16px 20px;
+    text-align: justify;
+    border: 1px solid #d8b6c7;
+    color: #666;
+    background-color: #fceaea;
+    width: 36%;
+    margin-top: 20px;
+}
+#usuarioOk{
+    border-radius: 6px;
+    margin: 0 auto;
+    padding: 12px 20px 16px 20px;
+    text-align: justify;
+    border: 1px solid #5cb85c;
+    color: #666;
+    background-color: #dff0d8;
+    width: 36%;
+    margin-top: 20px;
+}
+/**********CONTACTO*******************/
+@media only screen and (max-width: 767px) { 
+    #imgImagen{
+        width: 305px;
+    } 
+    #imgImagen1{
+        width: 305px;
+    } 
+    #contenedor{
+        width: 350px;
+    }
+    #btnCerrarSession{
+        float: left;
+        margin-left: 15px;
+        margin-top: -10px;   
+    }
+    #formularioCerrarSession{
+        margin-bottom: -29px;
+    }
+}

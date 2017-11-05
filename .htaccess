@@ -1,0 +1,5 @@
+Options All -Indexes
+
+RewriteEngine on
+RewriteRule ^home index.php
+RewriteRule ^new nuevo.php
