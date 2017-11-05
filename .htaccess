@@ -1,5 +1,7 @@
 Options All -Indexes
-
+ErrorDocument 500 /espiarobot/msg/500.php
+ErrorDocument 403 /espiarobot/msg/403.php
+ErrorDocument 404 /espiarobot/msg/404.php
 RewriteEngine on
 RewriteRule ^home index.php
 RewriteRule ^new nuevo.php
