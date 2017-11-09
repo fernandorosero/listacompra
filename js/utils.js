@@ -117,6 +117,8 @@ function borrarProducto(valorModificar){
                     if(response == 400){
                         alert("No de puede ve")
                     } else {
+                        var url = "home"; 
+                        $(location).attr('href',url);
                         //$('.contenido').addClass('none');
                         // $("#resultado").html(response);
                         // $('.contenido').removeClass('none');
@@ -136,5 +138,11 @@ function cancelarProducto(valorModificar){
     $(spanBorrar).removeClass('none');
     $(spanCancelarEdit).addClass('none');
 
+
+
+    var spanProducto = ".spanProducto_" + valorModificar;
+    var inputProducto = ".inputProducto_" + valorModificar;
+    $(spanProducto).removeClass('none');
+    $(inputProducto).addClass('none');
 }
 /**********FIN LISTADO***********/

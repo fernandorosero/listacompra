@@ -6,7 +6,12 @@
     $query = mysql_query($query_create, $conexion_db)
             or die("400");
     if($query){ 
-        header('Location: ../home');
+        //header('Location: ../home');
+        echo"<body onLoad='javascript:volverIndex();'>";
+            echo"<form name='returnIndex' action='home' method='post'>";
+                
+            echo"</form>";
+        echo"</body>";
     }
     else{
         echo '<input type="text"/>';

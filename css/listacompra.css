@@ -53,6 +53,13 @@ table tr th{
 table tr .crud{
     text-align: center;
 }
+.inputProductoCSS{
+    
+    height: 23px;
+}
+.inputProductoCSS:focus{
+    background: #ffffc9;
+}
 .iconomas{
     margin-right: 3px;
     
@@ -60,13 +67,23 @@ table tr .crud{
 .iconomenos{
     margin-left: 3px;
 }
-.iconoeditar{
+.iconoeditarCSS{
     color: green;
     margin-right: 8px;
     cursor: pointer;
 }
-.iconoborrar{
+.iconoborrarCSS{
     color: red;
+    margin-left: 8px;
+    cursor: pointer;
+}
+.iconoGuardarCSS{
+    color: #2f71aa;
+    margin-left: 8px;
+    cursor: pointer;
+}
+.iconoCancelGuardarCSS{
+    color: #d80b57;
     margin-left: 8px;
     cursor: pointer;
 }
