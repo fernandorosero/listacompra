@@ -25,6 +25,10 @@ and open the template in the editor.
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
+                            include_once './controller/ListadoProductos.php';
+                        ?>
+                        <!-- 
                         <tr>
                             <td class="productos">Platanos</td>
                             <td class="cantidad">
@@ -49,6 +53,7 @@ and open the template in the editor.
                                 <span class="iconoborrar glyphicon glyphicon-trash" aria-hidden="true"></span>
                             </td>
                         </tr>
+                        -->
                     </tbody>
                 </table>
             </section>

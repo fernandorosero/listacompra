@@ -1,3 +1,9 @@
+$(document).ready(function(){
+    operacionesListado();
+
+});
+
+
 function enviarForm(){
     document.loginSend.submit();
 }
@@ -57,3 +63,76 @@ function WebUpDownServoMotor(){
     });
 }
 /*********PYTHON*************/
+/**********INICIO LISTADO***********/
+function operacionesListado(){
+    $('.iconoeditar').click(function(){
+        $('.spanProducto').addClass('none');
+        $('.inputProducto').removeClass('none');
+    });
+}
+function editarProducto(valorModificar){
+    var spanProducto = ".spanProducto_" + valorModificar;
+    var inputProducto = ".inputProducto_" + valorModificar;
+    $(spanProducto).addClass('none');
+    $(inputProducto).removeClass('none');
+    
+    
+    
+    var spanEditar = ".iconoeditar_" + valorModificar;
+    var spanActualizar = ".actualizar_" + valorModificar;
+    var spanBorrar = ".iconoborrar_" + valorModificar;
+    var spanCancelarEdit = ".cancelareditar_" + valorModificar;
+    
+    $(spanEditar).addClass('none');
+    $(spanActualizar).removeClass('none');
+    $(spanBorrar).addClass('none');
+    $(spanCancelarEdit).removeClass('none');
+}
+
+function actualizarProducto(valorModificar){
+    
+    var spanEditar = ".iconoeditar_" + valorModificar;
+    var spanActualizar = ".actualizar_" + valorModificar;
+    var spanBorrar = ".iconoborrar_" + valorModificar;
+    var spanCancelarEdit = ".cancelareditar_" + valorModificar;
+    
+    $(spanEditar).removeClass('none');
+    $(spanActualizar).addClass('none');
+    $(spanBorrar).removeClass('none');
+    $(spanCancelarEdit).addClass('none');
+    
+}
+function borrarProducto(valorModificar){
+    var parametros = {
+                "idProductoDelete" : valorModificar,
+        };
+    $.ajax({
+        url : "controller/BorrarProducto.php",
+        method : "POST",
+        data: parametros,
+        beforeSend: function () {
+                $("#resultado").html("Procesando, espere por favor...");
+        },
+        success: function (response) {
+                    if(response == 400){
+                        alert("No de puede ve")
+                    } else {
+                        
+                    }
+                }
+    });
+
+}
+function cancelarProducto(valorModificar){
+    var spanEditar = ".iconoeditar_" + valorModificar;
+    var spanActualizar = ".actualizar_" + valorModificar;
+    var spanBorrar = ".iconoborrar_" + valorModificar;
+    var spanCancelarEdit = ".cancelareditar_" + valorModificar;
+    
+    $(spanEditar).removeClass('none');
+    $(spanActualizar).addClass('none');
+    $(spanBorrar).removeClass('none');
+    $(spanCancelarEdit).addClass('none');
+
+}
+/**********FIN LISTADO***********/
