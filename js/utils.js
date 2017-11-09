@@ -111,7 +111,9 @@ function borrarProducto(valorModificar){
         method : "POST",
         data: parametros,
         beforeSend: function () {
-                $("#resultado").html("Procesando, espere por favor...");
+            $("#resultado").removeClass('none')
+            $("#resultado").html("Procesando, espere por favor...");
+                
         },
         success: function (response) {
                     if(response == 400){
@@ -119,6 +121,7 @@ function borrarProducto(valorModificar){
                     } else {
                         var url = "home"; 
                         $(location).attr('href',url);
+                        $("#resultado").addveClass('none')
                         //$('.contenido').addClass('none');
                         // $("#resultado").html(response);
                         // $('.contenido').removeClass('none');

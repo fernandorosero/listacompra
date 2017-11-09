@@ -17,6 +17,16 @@ body {
 .none{
     display: none;
 }
+#resultado{
+    text-align: center;
+    border: 1px solid #8293ec;
+    background: #daecfb;
+    border-radius: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 .contenido{
     margin: 0 auto;
     width: 360px;

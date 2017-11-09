@@ -21,40 +21,14 @@ and open the template in the editor.
                         <tr>
                             <th class="productos">Producto</th>
                             <th class="cantidad">Cantidad</th>
-                            <th class="crud"><button class="nuevoProd btn btn-primary btn-xs">Nuevo</button></th>
+                            <th class="crud"></th>
                         </tr>
                     </thead>
                     <tbody>
-                    <div id="resultado"></div>
+                    <div id="resultado" class="none"></div>
                         <?php
                             include_once './controller/ListadoProductos.php';
                         ?>
-                        <!-- 
-                        <tr>
-                            <td class="productos">Platanos</td>
-                            <td class="cantidad">
-                                <span class="iconomas glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                02
-                                <span class="iconomenos glyphicon glyphicon-minus" aria-hidden="true"></span>
-                            </td>
-                            <td class="crud">
-                                <span class="iconoeditar glyphicon glyphicon-pencil" aria-hidden="true"></span> /
-                                <span class="iconoborrar glyphicon glyphicon-trash" aria-hidden="true"></span>
-                            </td>
-                        </tr>    
-                        <tr>
-                            
-                            <td class="productos">Platanos</td>
-                            <td class="cantidad">
-                                <span class="iconomas glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                42
-                                <span class="iconomenos glyphicon glyphicon-minus" aria-hidden="true"></span></td>
-                            <td class="crud">
-                                <span class="iconoeditar glyphicon glyphicon-pencil" aria-hidden="true"></span> /
-                                <span class="iconoborrar glyphicon glyphicon-trash" aria-hidden="true"></span>
-                            </td>
-                        </tr>
-                        -->
                     </tbody>
                 </table>
             </section>
