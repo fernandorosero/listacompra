@@ -3,7 +3,7 @@
     $hostdb = "localhost";
     $basededatos = "listacompra";    // sera el valor de nuestra BD
     $usuariodb = "root";    // sera el valor de nuestra BD
-    $clavedb = "";    // sera el valor de nuestra BD
+    $clavedb = "4545";    // sera el valor de nuestra BD
     //$tabla_db1 = "clientes";    // sera el valor de una tabla
     //$tabla_db2 = "otratabla";    // sera el valor de otra tabla
 
