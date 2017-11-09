@@ -14,16 +14,22 @@
     
     if($query){
         $errorUsuario = 200;
+        echo"<body onLoad='javascript:volverIndex();'>";
+            echo"<form name='returnIndex' action='../home' method='post'>";
+                echo"<input type='hidden' name='errorusuario' value='$errorUsuario'/> ";
+            echo"</form>";
+        echo"</body>";
     }
     else{
         $errorUsuario = 300;
+        echo"<body onLoad='javascript:volverProducto();'>";
+            echo"<form name='productoreturn' action='../nuevo.php' method='post'>";
+                echo"<input type='hidden' name='errorusuario' value='$errorUsuario'/> ";
+            echo"</form>";
+        echo"</body>";
     }
     
-    echo"<body onLoad='javascript:volverProducto();'>";
-        echo"<form name='productoreturn' action='../nuevo.php' method='post'>";
-            echo"<input type='hidden' name='errorusuario' value='$errorUsuario'/> ";
-        echo"</form>";
-    echo"</body>";
+    
     
     include_once '../model/CierraConexionBBDD.php';
 ?>

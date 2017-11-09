@@ -5,8 +5,9 @@
         echo '<p id="usuarioErroneo">No se ha podido guardar la informaci&oacute;n.</p>';
     }
     elseif ($errorUsuario == 200) {
+        
         echo '<p id="usuarioOk">La informaci&oacute;n se ha guardado correctamente.</p>';
-    
+        
     }
  ?>
 

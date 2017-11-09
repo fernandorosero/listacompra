@@ -25,6 +25,7 @@ and open the template in the editor.
                         </tr>
                     </thead>
                     <tbody>
+                    <div id="resultado"></div>
                         <?php
                             include_once './controller/ListadoProductos.php';
                         ?>

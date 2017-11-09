@@ -117,7 +117,9 @@ function borrarProducto(valorModificar){
                     if(response == 400){
                         alert("No de puede ve")
                     } else {
-                        
+                        //$('.contenido').addClass('none');
+                        // $("#resultado").html(response);
+                        // $('.contenido').removeClass('none');
                     }
                 }
     });
