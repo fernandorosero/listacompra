@@ -1,9 +1,6 @@
 $(document).ready(function(){
     operacionesListado();
-
 });
-
-
 function enviarForm(){
     document.loginSend.submit();
 }
@@ -32,7 +29,6 @@ function operacionesListado(){
         $('.spanProducto').addClass('none');
         $('.inputProducto').removeClass('none');
     });
-    
     $('.imagenRight').click(function(){
         $(this).parent('div').css('display', 'none');
     });
@@ -71,13 +67,10 @@ function editarProducto(valorModificar){
     $(spanEditar).addClass('none');
     $(spanActualizar).removeClass('none');
     $(spanBorrar).addClass('none');
-    $(spanCancelarEdit).removeClass('none');
-    
-    
+    $(spanCancelarEdit).removeClass('none');    
 }
 
 function actualizarProducto(valorModificar){
-    
     var spanEditar = ".iconoeditar_" + valorModificar;
     var spanActualizar = ".actualizar_" + valorModificar;
     var spanBorrar = ".iconoborrar_" + valorModificar;
@@ -118,34 +111,33 @@ function borrarProducto(valorModificar){
                     } else {
                         var url = "home"; 
                         $(location).attr('href',url);
-                        $("#resultado").addveClass('none')
-                        //$('.contenido').addClass('none');
-                        // $("#resultado").html(response);
-                        // $('.contenido').removeClass('none');
+                        $("#resultado").addveClass('none');
                     }
                 }
     });
-
 }
-function cancelarProducto(valorModificar){
-    var spanEditar = ".iconoeditar_" + valorModificar;
-    var spanActualizar = ".actualizar_" + valorModificar;
-    var spanBorrar = ".iconoborrar_" + valorModificar;
-    var spanCancelarEdit = ".cancelareditar_" + valorModificar;
+function cancelarProducto(id,valorModificar){
+    var spanEditar = ".iconoeditar_" + id;
+    var spanActualizar = ".actualizar_" + id;
+    var spanBorrar = ".iconoborrar_" + id;
+    var spanCancelarEdit = ".cancelareditar_" + id;
     
     $(spanEditar).removeClass('none');
     $(spanActualizar).addClass('none');
     $(spanBorrar).removeClass('none');
     $(spanCancelarEdit).addClass('none');
 
-    var spanIconoMas = ".iconoMasModificar_" + valorModificar;
-    var spanIconoMenos = ".iconoMenosModificar_" + valorModificar;
+    var spanIconoMas = ".iconoMasModificar_" + id;
+    var spanIconoMenos = ".iconoMenosModificar_" + id;
     $(spanIconoMas).addClass('none');
     $(spanIconoMenos).addClass('none');
 
-    var spanProducto = ".spanProducto_" + valorModificar;
-    var inputProducto = ".inputProducto_" + valorModificar;
+    var spanProducto = ".spanProducto_" + id;
+    var inputProducto = ".inputProducto_" + id;
     $(spanProducto).removeClass('none');
     $(inputProducto).addClass('none');
+    
+    var inputCantidad = "#inputCambiar_" + id;
+    $(inputCantidad).val(valorModificar);
 }
 /**********FIN LISTADO***********/

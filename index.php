@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <?php
         include_once './init.php';
@@ -49,8 +44,6 @@ and open the template in the editor.
                         </tr>
                     </thead>
                     <tbody>
-                    
-
                         <?php
                             include_once './controller/ListadoProductos.php';
                         ?>

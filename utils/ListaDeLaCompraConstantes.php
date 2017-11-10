@@ -1,5 +1,4 @@
 <?php
-
     $db_name="listacompra";
     
     $tabla_productos="CREATE TABLE IF NOT EXISTS productos "

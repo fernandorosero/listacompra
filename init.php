@@ -10,7 +10,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/utils.js"></script>
 
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>

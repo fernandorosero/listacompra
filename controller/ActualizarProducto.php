@@ -9,10 +9,8 @@
     $resultado_deti = $producto;
     //UPDATE productos SET producto='plan',cantidad=2 WHERE id_producto=70
     $query_create = "update productos set producto='$producto', cantidad=$cantidad  where id_producto=$id_producto;";
-    
     $query = mysql_query($query_create, $conexion_db)
             or die("400");
-    
     if($query){
         $errorUsuario = 220;
         echo"<body onLoad='javascript:volverIndex();'>";
@@ -29,8 +27,5 @@
             echo"</form>";
         echo"</body>";
     }
-    
-    
-    
     include_once '../model/CierraConexionBBDD.php';
 ?>

@@ -13,7 +13,7 @@
         <h2>Nuevo producto</h2>
         <form action="controller/GuardaProducto.php" method="POST">
             <label>Producto</label>
-            <input class="form-control" type="text" placeholder="Ingresa el producto" name="producto" required autofocus/>
+            <input class="form-control" type="text" placeholder="Ingresa el producto" name="producto" required autofocus maxlength="18"/>
             <label>Cantidad</label>
             <input class="form-control" type="number" placeholder="Cuantos productos?" name="cantidad" required value="1" max="99"/>
             <div class="grupobotonera">
