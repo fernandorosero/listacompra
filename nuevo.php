@@ -15,7 +15,7 @@
             <label>Producto</label>
             <input class="form-control" type="text" placeholder="Ingresa el producto" name="producto" required autofocus/>
             <label>Cantidad</label>
-            <input class="form-control" type="text" placeholder="Cuantos productos?" name="cantidad" required value="1"/>
+            <input class="form-control" type="number" placeholder="Cuantos productos?" name="cantidad" required value="1" max="99"/>
             <div class="grupobotonera">
                 <a href="home" class="btn btn-danger">Cancelar</a>
                 <button type="submit" class="btn btn-primary">Guardar</button>

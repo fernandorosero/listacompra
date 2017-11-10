@@ -7,6 +7,7 @@ and open the template in the editor.
 <html>
     <?php
         include_once './init.php';
+        $errorUsuario = filter_input(INPUT_POST, 'errorusuario');
     ?>
     <body>
         <div class="contenido">
@@ -16,6 +17,29 @@ and open the template in the editor.
                 </div>
             </header>
             <section>
+                <?php
+                    if ($errorUsuario==300) {
+                ?>
+                        <div id="mensajeError" class="">
+                            <img class="imagenLeft" src="img/okmensaje.png"/>
+                            <span class="textMensajeError">El producto no se ha guardado.</span>
+                            <img class="imagenRight" src="img/cierraaviso.png"/>
+                        </div>
+                <?php
+                    }
+                ?>
+                <?php
+                    if ($errorUsuario==200) {
+                ?>
+                        <div id="mensajeOk" class="">
+                            <img class="imagenLeft"  src="img/okmensaje.png"/>
+                            <span class="textMensajeError">El producto se ha guardado.</span>
+                            <img class="imagenRight" src="img/cierraaviso.png"/>
+                        </div>
+                <?php
+                    }
+                ?>
+                <div id="resultado" class="none"></div>
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -25,7 +49,8 @@ and open the template in the editor.
                         </tr>
                     </thead>
                     <tbody>
-                    <div id="resultado" class="none"></div>
+                    
+
                         <?php
                             include_once './controller/ListadoProductos.php';
                         ?>

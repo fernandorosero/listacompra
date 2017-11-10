@@ -63,6 +63,13 @@ table tr th{
 table tr .crud{
     text-align: center;
 }
+.valorCambiar{
+    width: 24px;
+    text-align: center;
+    border: none;
+    background: transparent;
+}
+
 .inputProductoCSS{
     
     height: 23px;
@@ -137,6 +144,43 @@ footer{
     margin-top: 20px;
 }
 /**********CONTACTO*******************/
+
+#mensajeError{
+    margin-top: 10px;
+    border-radius: 6px;
+    padding: 3px 0px 4px 0px;
+    border: 1px solid #d8b6c7;
+    color: #666;
+    background-color: #fceaea;
+    width: 100%;
+}
+.imagenLeft{
+    float: left;
+    margin-top: 6px;
+    margin-left: 10px;
+}
+.textMensajeError{
+    margin-left: 15px;
+}
+.imagenRight{
+    float: right;
+    margin-top: 4px;
+    margin-right: 9px;
+    cursor: pointer;
+}
+#resultadoCero:hover{
+    background: #fff;
+}
+#mensajeOk{
+    margin-top: 10px;
+    border-radius: 6px;
+    padding: 4px 0px 4px 0px;
+    border: 1px solid #5cb85c;
+    color: #666;
+    background-color: #dff0d8;
+    width: 100%;    
+}
+
 @media only screen and (max-width: 767px) { 
     #imgImagen{
         width: 305px;
