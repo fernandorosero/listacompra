@@ -32,7 +32,7 @@
                 echo "<span onClick='actualizarProducto($row[0])' class='actualizar_$row[0] iconoGuardarCSS none glyphicon glyphicon-floppy-disk' aria-hidden='true' title='Guardar Cambio'></span>";
                 echo " /";
                 echo "<span onClick='borrarProducto($row[0])' class='iconoborrar_$row[0] iconoborrarCSS glyphicon glyphicon-trash' aria-hidden='true' title='Borrar Producto'></span>";
-                echo "<span onClick='cancelarProducto($row[0], $row[2])' class='cancelareditar_$row[0] iconoCancelGuardarCSS none glyphicon glyphicon-floppy-remove' aria-hidden='true' title='Cancelar'></span>";
+                echo "<span onClick='cancelarProducto($row[0], $row[2])' class='cancelareditar_$row[0] iconoCancelGuardarCSS none glyphicon glyphicon glyphicon-share-alt' aria-hidden='true' title='Cancelar'></span>";
             echo "</td>";
         echo "</tr>";
     }
