@@ -93,28 +93,31 @@ function actualizarProducto(valorModificar){
     enviarActualizar(valorModificar);
 }
 function borrarProducto(valorModificar){
-    var parametros = {
-                "idProductoDelete" : valorModificar,
-        };
-    $.ajax({
-        url : "controller/BorrarProducto.php",
-        method : "POST",
-        data: parametros,
-        beforeSend: function () {
-            $("#resultado").removeClass('none')
-            $("#resultado").html("Procesando, espere por favor...");
-                
-        },
-        success: function (response) {
-                    if(response == 400){
-                        alert("No de puede ve")
-                    } else {
-                        var url = "home"; 
-                        $(location).attr('href',url);
-                        $("#resultado").addveClass('none');
+    var pregunta = confirm("Seguro desea borrar?");
+    if (pregunta){
+        var parametros = {
+                    "idProductoDelete" : valorModificar,
+            };
+        $.ajax({
+            url : "controller/BorrarProducto.php",
+            method : "POST",
+            data: parametros,
+            beforeSend: function () {
+                $("#resultado").removeClass('none')
+                $("#resultado").html("Procesando, espere por favor...");
+
+            },
+            success: function (response) {
+                        if(response == 400){
+                            alert("No de puede ve")
+                        } else {
+                            var url = "home"; 
+                            $(location).attr('href',url);
+                            $("#resultado").addveClass('none');
+                        }
                     }
-                }
-    });
+        });
+    }
 }
 function cancelarProducto(id,valorModificar){
     var spanEditar = ".iconoeditar_" + id;
@@ -139,5 +142,13 @@ function cancelarProducto(id,valorModificar){
     
     var inputCantidad = "#inputCambiar_" + id;
     $(inputCantidad).val(valorModificar);
+}
+function verificarBorrado(){
+    var pregunta = confirm("Seguro desea borrar?");
+    if (pregunta){
+        return true;
+    }else{
+        return false;
+    }
 }
 /**********FIN LISTADO***********/
